@@ -86,10 +86,6 @@ def notes(request):
         obj.save()
     return render(request,'teacher/notes.html')
 
-
-
-
-
 ## google calender api integration
 
 from teacher.calendar_API import test_calendar
