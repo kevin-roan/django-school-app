@@ -1,11 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-#
-# def register(request):
-#     return render(request, 'teacher/tchregister.html')
-#
-
 from register.models import Teacher
 from register.models import Student
 from register.models import Login
@@ -29,7 +24,6 @@ def register(request):
             obj.type = "teacher"
             obj.u_id=tch.t_id
             obj.save()
-            # checkuser("teacher")
         else:
             print("Student logged in ")
             std.name = request.POST.get('username')

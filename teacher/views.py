@@ -42,15 +42,6 @@ def studentadd(request, idd):
     obj.save()
     return view(request)
 
-
-#
-# def managestudents(request):
-#     # obj= Student.objects.get(std_id=idd)
-#     # obj.status = request.POST.get('')
-#
-#     return render(request,'teacher/managestudents.html')
-
-
 def managestudents(request):
     obj=Student.objects.all()
     context={
