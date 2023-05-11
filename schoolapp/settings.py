@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'login.apps.LoginConfig',
     'register.apps.RegisterConfig',
     'student.apps.StudentConfig',
+    'hod.apps.HodConfig',
 ]
 
 MIDDLEWARE = [
