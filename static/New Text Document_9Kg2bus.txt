@@ -1,0 +1,69 @@
+django-admin startproject 'projectname'
+// to start app
+cd into the project directory
+python manage.py startapp 'appname'
+
+// setting python interpreter
+open settings, project interpreter=>
+C:\Users\F Microsoft\AppData\Local\Programs\Python\Python36-32\python.exe
+
+
+>> Import all the sub-modules to the main application 
+
+Edit the setting.py of projectname dir,
+
+# Application definition
+
+import sub-modules by=>
+
+    'submodulename.app.submoduleConfig';
+
+
+### setting route 
+
+edit urls.py of main-app 
+
+from django.conf.urls import url,include
+
+then, declare urlpatter
+ 	urlpatterns=[
+  url('routename/',include('subappname.url')
+
+]
+
+
+### On url.py of the sub-application
+
+[url.py]
+
+from django.conf.urls import url
+
+from sub-module import views
+
+
+now that we imported the views file from the main submodule directory, 
+we can use the functions declared on the views.py file
+
+on url.py file of submodule, we can call the functions by 
+
+urlpatterns=[
+	url('route/',views.functionname),
+]
+
+To declare functions, 
+def page(request):
+    if request.method=='POST':
+        username=request.POST.get('user')
+        password=request.POST.get('pass')
+        print("User name:"+username)
+        print("PassWord:"+password)
+    return render(request,'user/loginpage.html')
+
+
+we can use implement html on 
+submodule/templates/index.html
+
+
+
+# to call models of table
+python manage.py inspectdb 'tablename'
