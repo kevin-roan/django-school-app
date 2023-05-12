@@ -29,11 +29,11 @@
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          View Teachers
+          Notifications
         </a>
        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="dropdown-item" href="/student/teacherlist">View Teachers</a>
-          <a class="dropdown-item" href="/student/notes">View Notes & Notifications</a>
+        <a class="dropdown-item" href="/student/notes">Notifications</a>
+          <a class="dropdown-item" href="/student/teacherlist">Your Teachers</a>
           <div class="dropdown-divider"></div>
 {#          <a class="dropdown-item" href="/register">Register</a>#}
         </div>
@@ -44,7 +44,8 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <a href="/login/login.html"
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">LogOut</button></a>
     </form>
   </div>
 </nav>
@@ -62,7 +63,6 @@
     <tr>
 {#      <td>{{ i.title }}</td>#}
         <td>
-        <iframe src="/static/{{ i.title }}" style="width: 100%;height: 100%;border: none;"></iframe>
         <iframe src="/static/{{ i.title }}" style="width: 100%;height: 100%;border: none;"></iframe>
         </td>
       <td>{{ i.note }}</td>

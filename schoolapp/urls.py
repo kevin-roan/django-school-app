@@ -24,5 +24,5 @@ urlpatterns = [
     # url('',include('login.url')),
     url('register/',include('register.url')),
     url('student/',include('student.url')),
-    url('hod/',include('hod.url'))
+
 ]

@@ -78,3 +78,8 @@ def login(request):
             return render(request,'login/teacherlogin.html',context)
         return render(request,'login/teacherlogin.html')
     return render(request,'login/teacherlogin.html')
+
+
+def logout(request):
+    print("log out success")
+    return render(request,'teacher/notes.html')
